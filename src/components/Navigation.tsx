@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/treegen-logo.jpeg';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +15,6 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -26,39 +23,36 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
+          <Link to="/" className="flex items-center gap-3 cursor-pointer">
             <img src={logo} alt="TREEGEN RECYCLERS" className="h-12 w-12 object-contain" />
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-wider text-foreground">TREEGEN</span>
               <span className="text-xs text-muted-foreground tracking-widest">RECYCLERS</span>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('process')}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+              }`}
             >
-              Process
-            </button>
-            <button
-              onClick={() => scrollToSection('impact')}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/about' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+              }`}
             >
-              Impact
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              Services
-            </button>
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-green"
-            >
-              Get Started
-            </Button>
+              About Us
+            </Link>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground glow-green">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
