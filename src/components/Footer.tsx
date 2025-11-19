@@ -1,5 +1,6 @@
 import logo from '@/assets/treegen-logo.jpeg';
 import { Leaf } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -26,20 +27,26 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#process" className="hover:text-primary transition-colors">Our Process</a></li>
-              <li><a href="#impact" className="hover:text-primary transition-colors">Impact</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-foreground mb-4">Certifications</h4>
+            <h4 className="font-bold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>R2 Certified</li>
-              <li>e-Stewards</li>
-              <li>ISO 14001</li>
-              <li>NAID AAA</li>
+              <li>
+                <a href="tel:+916302517734" className="hover:text-primary transition-colors">
+                  +91 6302517734
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@treegenrecyclers.com" className="hover:text-primary transition-colors">
+                  info@treegenrecyclers.com
+                </a>
+              </li>
+              <li>Renigunta, Andhra Pradesh</li>
             </ul>
           </div>
         </div>

@@ -1,17 +1,15 @@
 import HeroSection from '@/components/HeroSection';
 import ProcessSection from '@/components/ProcessSection';
 import ImpactSection from '@/components/ImpactSection';
-import ContactSection from '@/components/ContactSection';
 
-const Index = () => {
+const Home = () => {
   return (
     <>
       <HeroSection />
       <ProcessSection />
       <ImpactSection />
-      <ContactSection />
     </>
   );
 };
 
-export default Index;
+export default Home;

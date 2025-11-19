@@ -150,8 +150,10 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri, 9AM-6PM EST</p>
+                    <a href="tel:+916302517734" className="text-muted-foreground hover:text-primary transition-colors">
+                      +91 6302517734
+                    </a>
+                    <p className="text-sm text-muted-foreground">Mon-Fri, 9AM-6PM IST</p>
                   </div>
                 </div>
 
@@ -161,7 +163,9 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">contact@treegenrecyclers.com</p>
+                    <a href="mailto:info@treegenrecyclers.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      info@treegenrecyclers.com
+                    </a>
                     <p className="text-sm text-muted-foreground">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -173,9 +177,9 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Headquarters</h4>
                     <p className="text-muted-foreground">
-                      123 Recycling Way
+                      Renigunta
                       <br />
-                      Green City, ST 12345
+                      Andhra Pradesh, India
                     </p>
                   </div>
                 </div>
