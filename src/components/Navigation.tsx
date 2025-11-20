@@ -48,6 +48,22 @@ const Navigation = () => {
             >
               About Us
             </Link>
+            <Link
+              to="/services"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/services' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+              }`}
+            >
+              Services
+            </Link>
+            <Link
+              to="/gallery"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/gallery' ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+              }`}
+            >
+              Gallery
+            </Link>
             <Link to="/contact">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground glow-green">
                 Contact Us
