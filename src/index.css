@@ -87,6 +87,18 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Touch-friendly mobile interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Glow effects */
   .glow-green {
     box-shadow: 0 0 20px hsl(var(--forest-green-light) / 0.4),
                 0 0 40px hsl(var(--forest-green) / 0.2);
