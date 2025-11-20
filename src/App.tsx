@@ -5,9 +5,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoIntro from "./components/VideoIntro";
+import VisitorModal from "./components/VisitorModal";
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
@@ -41,10 +44,13 @@ const App = () => {
         {showIntro && !hasSeenIntro && <VideoIntro onComplete={handleIntroComplete} />}
         <BrowserRouter>
           <div className="bg-background text-foreground">
+            <VisitorModal />
             <Navigation />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

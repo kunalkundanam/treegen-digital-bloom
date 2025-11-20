@@ -3,7 +3,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import DigitalForest from './3d/DigitalForest';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onPartnerClick?: () => void;
+}
+
+const HeroSection = ({ onPartnerClick }: HeroSectionProps) => {
   const scrollToProcess = () => {
     document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -65,7 +69,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={onPartnerClick}
               className="border-2 border-primary/50 hover:bg-primary/10 px-8 py-6 text-lg"
             >
               Partner With Us
