@@ -36,7 +36,7 @@ const About = () => {
 
   const boardMembers = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Satish Kundanam',
       position: 'Chairman & CEO',
       description: 'Pioneering sustainable e-waste solutions with 20+ years of industry experience.',
       photo: rajeshPhoto,
@@ -58,7 +58,7 @@ const About = () => {
       ]
     },
     {
-      name: 'Priya Sharma',
+      name: 'Jatin',
       position: 'Chief Technology Officer',
       description: 'Leading innovation in AI-powered recycling technology and automation.',
       photo: priyaPhoto,
