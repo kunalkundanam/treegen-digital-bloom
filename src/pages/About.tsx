@@ -1,7 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, Users, Target, Briefcase } from 'lucide-react';
+import { Shield, Award, Users, Target } from 'lucide-react';
+import BoardMemberModal from '@/components/BoardMemberModal';
+import rajeshPhoto from '@/assets/board-rajesh-kumar.jpg';
+import priyaPhoto from '@/assets/board-priya-sharma.jpg';
+import amitPhoto from '@/assets/board-amit-patel.jpg';
+import sunitaPhoto from '@/assets/board-sunita-reddy.jpg';
 
 const About = () => {
+  const [selectedMember, setSelectedMember] = useState<any>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
   const values = [
     {
       icon: Shield,
@@ -30,23 +39,97 @@ const About = () => {
       name: 'Rajesh Kumar',
       position: 'Chairman & CEO',
       description: 'Pioneering sustainable e-waste solutions with 20+ years of industry experience.',
+      photo: rajeshPhoto,
+      email: 'rajesh.kumar@treegenrecyclers.com',
+      phone: '+91 98765 43210',
+      linkedin: 'https://linkedin.com',
+      bio: 'Rajesh Kumar is a visionary leader with over two decades of experience in environmental technology and waste management. As the founder and CEO of TREEGEN RECYCLERS, he has transformed the company into India\'s premier e-waste recycling organization. His commitment to sustainability and innovation has earned him recognition as one of the industry\'s most influential figures.',
+      education: [
+        'MBA in Environmental Management - IIM Bangalore',
+        'B.Tech in Chemical Engineering - IIT Delhi',
+        'Certified Environmental Auditor - ISO 14001'
+      ],
+      achievements: [
+        'Founded TREEGEN RECYCLERS and achieved 99% waste diversion rate',
+        'Established partnerships with 500+ corporate clients across India',
+        'Awarded "Green Business Leader of the Year" 2023',
+        'Successfully processed over 10 million kg of e-waste',
+        'Pioneered AI-based sorting technology in Indian recycling industry'
+      ]
     },
     {
       name: 'Priya Sharma',
       position: 'Chief Technology Officer',
       description: 'Leading innovation in AI-powered recycling technology and automation.',
+      photo: priyaPhoto,
+      email: 'priya.sharma@treegenrecyclers.com',
+      phone: '+91 98765 43211',
+      linkedin: 'https://linkedin.com',
+      bio: 'Priya Sharma is a technology innovator who brings cutting-edge AI and automation solutions to the recycling industry. With a background in artificial intelligence and robotics, she has developed proprietary systems that have revolutionized e-waste sorting and processing efficiency at TREEGEN RECYCLERS.',
+      education: [
+        'Ph.D. in Artificial Intelligence - Stanford University',
+        'M.Tech in Robotics - IIT Bombay',
+        'B.E. in Computer Science - BITS Pilani'
+      ],
+      achievements: [
+        'Developed AI-powered waste sorting system with 98% accuracy',
+        'Published 15+ research papers on sustainable technology',
+        'Led automation projects that increased efficiency by 300%',
+        'Recipient of "Women in Tech Excellence Award" 2022',
+        'Patent holder for innovative recycling automation technology'
+      ]
     },
     {
       name: 'Amit Patel',
       position: 'Director of Operations',
       description: 'Ensuring operational excellence and environmental compliance across facilities.',
+      photo: amitPhoto,
+      email: 'amit.patel@treegenrecyclers.com',
+      phone: '+91 98765 43212',
+      linkedin: 'https://linkedin.com',
+      bio: 'Amit Patel oversees all operational aspects of TREEGEN RECYCLERS, ensuring compliance with environmental regulations and maintaining the highest standards of safety and efficiency. His expertise in lean manufacturing and quality management has been instrumental in scaling the company\'s operations.',
+      education: [
+        'MBA in Operations Management - XLRI Jamshedpur',
+        'B.E. in Industrial Engineering - NIT Trichy',
+        'Six Sigma Black Belt Certification',
+        'ISO Lead Auditor - TÜV SÜD'
+      ],
+      achievements: [
+        'Achieved ISO 14001 and R2 certifications for all facilities',
+        'Implemented lean processes reducing operational costs by 25%',
+        'Managed expansion to 3 processing facilities across India',
+        'Zero workplace accidents record for 5 consecutive years',
+        'Established industry-leading quality management systems'
+      ]
     },
     {
       name: 'Sunita Reddy',
       position: 'Head of Sustainability',
       description: 'Driving environmental initiatives and circular economy strategies.',
+      photo: sunitaPhoto,
+      email: 'sunita.reddy@treegenrecyclers.com',
+      phone: '+91 98765 43213',
+      linkedin: 'https://linkedin.com',
+      bio: 'Sunita Reddy is passionate about creating a circular economy and driving meaningful environmental change. She leads TREEGEN\'s sustainability initiatives, focusing on reducing carbon footprint, promoting responsible consumption, and developing partnerships that advance the circular economy model.',
+      education: [
+        'M.Sc. in Environmental Science - University of Oxford',
+        'B.Sc. in Chemistry - Delhi University',
+        'Certified Sustainability Professional - ISSP'
+      ],
+      achievements: [
+        'Reduced company carbon footprint by 40% in 3 years',
+        'Established circular economy partnerships with 200+ brands',
+        'Launched community e-waste awareness programs reaching 1M+ people',
+        'Awarded "Sustainability Champion" by FICCI 2023',
+        'Developed zero-waste-to-landfill protocols adopted industry-wide'
+      ]
     },
   ];
+
+  const handleMemberClick = (member: any) => {
+    setSelectedMember(member);
+    setModalOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-background pt-24">
@@ -124,6 +207,9 @@ const About = () => {
             className="mb-20"
           >
             <h2 className="text-3xl font-bold mb-10 text-center text-foreground">Our Leadership Team</h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Click on any team member to learn more about their background and achievements
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {boardMembers.map((member, index) => (
                 <motion.div
@@ -131,18 +217,33 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                  className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 text-center group"
+                  onClick={() => handleMemberClick(member)}
+                  className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 text-center group cursor-pointer hover-scale"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-recycle/20 flex items-center justify-center mx-auto mb-4 group-hover:glow-green transition-all">
-                    <Briefcase className="w-10 h-10 text-primary" />
+                  <div className="relative w-28 h-28 rounded-full mx-auto mb-4 overflow-hidden border-4 border-primary/20 group-hover:border-primary/50 transition-all group-hover:glow-green">
+                    <img 
+                      src={member.photo} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
                   <p className="text-sm text-primary font-semibold mb-3">{member.position}</p>
                   <p className="text-sm text-muted-foreground">{member.description}</p>
+                  <p className="text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Click to view profile →
+                  </p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
+          
+          <BoardMemberModal 
+            member={selectedMember}
+            open={modalOpen}
+            onOpenChange={setModalOpen}
+          />
 
           {/* Certifications */}
           <motion.div
