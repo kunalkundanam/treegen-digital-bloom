@@ -14,8 +14,8 @@ const VisitorModal = () => {
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('visitorDetailsSubmitted');
     if (!hasVisited) {
-      // Show modal after 1 second
-      const timer = setTimeout(() => setOpen(true), 1000);
+      // Show modal after 2 seconds
+      const timer = setTimeout(() => setOpen(true), 2000);
       return () => clearTimeout(timer);
     }
   }, []);

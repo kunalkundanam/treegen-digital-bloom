@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Award, Users, Target } from 'lucide-react';
+import { Shield, Award, Users, Target, Briefcase } from 'lucide-react';
 
 const About = () => {
   const values = [
@@ -22,6 +22,29 @@ const About = () => {
       icon: Target,
       title: 'Innovation',
       description: 'Leveraging AI-powered technology for efficient and accurate recycling.',
+    },
+  ];
+
+  const boardMembers = [
+    {
+      name: 'Rajesh Kumar',
+      position: 'Chairman & CEO',
+      description: 'Pioneering sustainable e-waste solutions with 20+ years of industry experience.',
+    },
+    {
+      name: 'Priya Sharma',
+      position: 'Chief Technology Officer',
+      description: 'Leading innovation in AI-powered recycling technology and automation.',
+    },
+    {
+      name: 'Amit Patel',
+      position: 'Director of Operations',
+      description: 'Ensuring operational excellence and environmental compliance across facilities.',
+    },
+    {
+      name: 'Sunita Reddy',
+      position: 'Head of Sustainability',
+      description: 'Driving environmental initiatives and circular economy strategies.',
     },
   ];
 
@@ -93,11 +116,39 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Certifications */}
+          {/* Board Members */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-bold mb-10 text-center text-foreground">Our Leadership Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {boardMembers.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                  className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 text-center group"
+                >
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-recycle/20 flex items-center justify-center mx-auto mb-4 group-hover:glow-green transition-all">
+                    <Briefcase className="w-10 h-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
+                  <p className="text-sm text-primary font-semibold mb-3">{member.position}</p>
+                  <p className="text-sm text-muted-foreground">{member.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Certifications */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-br from-primary/10 to-recycle/10 border border-primary/20 text-center">
               <h2 className="text-3xl font-bold mb-6 text-foreground">Industry Leading Certifications</h2>
