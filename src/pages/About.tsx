@@ -35,10 +35,33 @@ const About = () => {
   ];
 
   const boardMembers = [
+     {
+      name: 'Satish Kundanam',
+      position: 'Chairman',
+      description: 'Pioneering sustainable e-waste solutions with industry experience.',
+      photo: amitPhoto,
+      email: 'satish.kundanam@treegenrecyclers.com',
+      phone: '+91 90000 06788',
+      linkedin: 'https://linkedin.com',
+      bio: 'Satish Kundanam os a visionary leader with experience in environmental technology and waste management. As the founder of TREEGEN RECYCLERSS,While ensuring compliance with environmental regulations and maintaining the highest standards of safety and efficiency. His expertise in lean manufacturing and quality management has been instrumental in scaling the company\'s operations.',
+      education: [
+        'MBA in Operations Management - XLRI Jamshedpur',
+        'B.E. in Industrial Engineering - NIT Trichy',
+        'Six Sigma Black Belt Certification',
+        'ISO Lead Auditor - TÜV SÜD'
+      ],
+      achievements: [
+        'Achieved ISO 14001 and R2 certifications for all facilities',
+        'Implemented lean processes reducing operational costs by 25%',
+        'Managed expansion to 3 processing facilities across India',
+        'Zero workplace accidents record for 5 consecutive years',
+        'Established industry-leading quality management systems'
+      ]
+    },
     {
       name: 'Kunal Kundanam',
-      position: 'Chairman & CEO',
-      description: 'Pioneering sustainable e-waste solutions with industry experience.',
+      position: 'Director of Operations & CEO',
+      description: 'Ensuring operational excellence and environmental compliance across facilities.',
       photo: rajeshPhoto,
       email: 'kunal.kundanam@treegenrecyclers.com',
       phone: '+91 70366 67567',
@@ -75,36 +98,14 @@ const About = () => {
         'Patent holder for innovative recycling automation technology'
       ]
     },
+   
     {
-      name: 'Amit Patel',
-      position: 'Director of Operations',
-      description: 'Ensuring operational excellence and environmental compliance across facilities.',
-      photo: amitPhoto,
-      email: 'amit.patel@treegenrecyclers.com',
-      phone: '+91 98765 43212',
-      linkedin: 'https://linkedin.com',
-      bio: 'Amit Patel oversees all operational aspects of TREEGEN RECYCLERS, ensuring compliance with environmental regulations and maintaining the highest standards of safety and efficiency. His expertise in lean manufacturing and quality management has been instrumental in scaling the company\'s operations.',
-      education: [
-        'MBA in Operations Management - XLRI Jamshedpur',
-        'B.E. in Industrial Engineering - NIT Trichy',
-        'Six Sigma Black Belt Certification',
-        'ISO Lead Auditor - TÜV SÜD'
-      ],
-      achievements: [
-        'Achieved ISO 14001 and R2 certifications for all facilities',
-        'Implemented lean processes reducing operational costs by 25%',
-        'Managed expansion to 3 processing facilities across India',
-        'Zero workplace accidents record for 5 consecutive years',
-        'Established industry-leading quality management systems'
-      ]
-    },
-    {
-      name: 'Sunita Reddy',
-      position: 'Head of Sustainability',
+      name: 'Swathi Kundanam',
+      position: 'Director',
       description: 'Driving environmental initiatives and circular economy strategies.',
       photo: sunitaPhoto,
-      email: 'sunita.reddy@treegenrecyclers.com',
-      phone: '+91 98765 43213',
+      email: 'swathi.kundanam@treegenrecyclers.com',
+      phone: '+91 97042 94999 ',
       linkedin: 'https://linkedin.com',
       bio: 'Sunita Reddy is passionate about creating a circular economy and driving meaningful environmental change. She leads TREEGEN\'s sustainability initiatives, focusing on reducing carbon footprint, promoting responsible consumption, and developing partnerships that advance the circular economy model.',
       education: [
