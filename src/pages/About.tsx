@@ -37,7 +37,7 @@ const About = () => {
   const boardMembers = [
      {
       name: 'Satish Kundanam',
-      position: 'Chairman',
+      position: 'Chairman and Founder',
       description: 'Pioneering sustainable e-waste solutions with industry experience.',
       photo: amitPhoto,
       email: 'satish.kundanam@treegenrecyclers.com',
