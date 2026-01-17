@@ -56,24 +56,22 @@ const About = () => {
       ]
     },
     {
-      name: 'Jatin',
-      position: 'Chief Technology Officer',
-      description: 'Leading innovation in AI-powered recycling technology and automation.',
+      name: 'Harshad Kundanam',
+      position: 'Director',
+      description: 'Leading innovation in Cyber Security and AI-powered recycling technology and automation.',
       photo: priyaPhoto,
-      email: 'priya.sharma@treegenrecyclers.com',
-      phone: '+91 98765 43211',
+      email: 'harshad.kundanam@treegenrecyclers.com',
+      phone: '+91 96661 86570',
       linkedin: 'https://linkedin.com',
-      bio: 'Priya Sharma is a technology innovator who brings cutting-edge AI and automation solutions to the recycling industry. With a background in artificial intelligence and robotics, she has developed proprietary systems that have revolutionized e-waste sorting and processing efficiency at TREEGEN RECYCLERS.',
+      bio: 'Harshad Kundanam is a technology innovator who brings cutting-edge Cybersecurity and AI automation solutions to the recycling industry. With a background in Cybersecurity and Artificial intelligence and robotics, He has developed proprietary systems that have revolutionized e-waste sorting and processing efficiency at TREEGEN RECYCLERS.',
       education: [
-        'Ph.D. in Artificial Intelligence - Stanford University',
-        'M.Tech in Robotics - IIT Bombay',
-        'B.E. in Computer Science - BITS Pilani'
+        'Masters in Cyber Security  - Coventry University',
+        'B.Tech in Computer Science - SVCE'
       ],
       achievements: [
         'Developed AI-powered waste sorting system with 98% accuracy',
-        'Published 15+ research papers on sustainable technology',
+        'Published 15+ research papers on Cybersecurity technology',
         'Led automation projects that increased efficiency by 300%',
-        'Recipient of "Women in Tech Excellence Award" 2022',
         'Patent holder for innovative recycling automation technology'
       ]
     },
