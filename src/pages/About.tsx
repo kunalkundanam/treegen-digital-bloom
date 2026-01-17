@@ -36,23 +36,21 @@ const About = () => {
 
   const boardMembers = [
     {
-      name: 'Satish Kundanam',
+      name: 'Kunal Kundanam',
       position: 'Chairman & CEO',
-      description: 'Pioneering sustainable e-waste solutions with 20+ years of industry experience.',
+      description: 'Pioneering sustainable e-waste solutions with industry experience.',
       photo: rajeshPhoto,
-      email: 'rajesh.kumar@treegenrecyclers.com',
-      phone: '+91 98765 43210',
+      email: 'kunal.kundanam@treegenrecyclers.com',
+      phone: '+91 70366 67567',
       linkedin: 'https://linkedin.com',
-      bio: 'Rajesh Kumar is a visionary leader with over two decades of experience in environmental technology and waste management. As the founder and CEO of TREEGEN RECYCLERS, he has transformed the company into India\'s premier e-waste recycling organization. His commitment to sustainability and innovation has earned him recognition as one of the industry\'s most influential figures.',
+      bio: 'Kunal Kundanam is a visionary leader with experience in environmental technology and waste management. As the founder and CEO of TREEGEN RECYCLERS, he has transformed the company into India\'s premier e-waste recycling organization. His commitment to sustainability and innovation has earned him recognition as one of the industry\'s most influential figures.',
       education: [
-        'MBA in Environmental Management - IIM Bangalore',
-        'B.Tech in Chemical Engineering - IIT Delhi',
+        'B.Tech in Computer Science Engineering - SVCE Tirupati',
         'Certified Environmental Auditor - ISO 14001'
       ],
       achievements: [
         'Founded TREEGEN RECYCLERS and achieved 99% waste diversion rate',
-        'Established partnerships with 500+ corporate clients across India',
-        'Awarded "Green Business Leader of the Year" 2023',
+        'Established partnerships with 20+ corporate clients across India',
         'Successfully processed over 10 million kg of e-waste',
         'Pioneered AI-based sorting technology in Indian recycling industry'
       ]
