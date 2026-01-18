@@ -88,7 +88,7 @@ const About = () => {
       linkedin: 'https://linkedin.com',
       bio: 'Harshad Kundanam is a technology innovator who brings cutting-edge Cybersecurity and AI automation solutions to the recycling industry. With a background in Cybersecurity and Artificial intelligence and robotics, He has developed proprietary systems that have revolutionized e-waste sorting and processing efficiency at TREEGEN RECYCLERS.',
       education: [
-        'Masters in Cyber Security  - Coventry University',
+        'Masters in Cyber Security in Coventry University - United Kingdom',
         'B.Tech in Computer Science - SVCE'
       ],
       achievements: [
@@ -107,11 +107,10 @@ const About = () => {
       email: 'swathi.kundanam@treegenrecyclers.com',
       phone: '+91 97042 94999 ',
       linkedin: 'https://linkedin.com',
-      bio: 'Sunita Reddy is passionate about creating a circular economy and driving meaningful environmental change. She leads TREEGEN\'s sustainability initiatives, focusing on reducing carbon footprint, promoting responsible consumption, and developing partnerships that advance the circular economy model.',
+      bio: 'Swathi Kundanam is passionate about creating a circular economy and driving meaningful environmental change. She leads TREEGEN\'s sustainability initiatives, focusing on reducing carbon footprint, promoting responsible consumption, and developing partnerships that advance the circular economy model.',
       education: [
-        'M.Sc. in Environmental Science - University of Oxford',
-        'B.Sc. in Chemistry - Delhi University',
-        'Certified Sustainability Professional - ISSP'
+        'Interior Designer  - Pune',
+        'Arts - Kolhapur'
       ],
       achievements: [
         'Reduced company carbon footprint by 40% in 3 years',
