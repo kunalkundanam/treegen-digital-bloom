@@ -43,7 +43,7 @@ const About = () => {
       email: 'satish.kundanam@treegenrecyclers.com',
       phone: '+91 90000 06788',
       linkedin: 'https://linkedin.com',
-      bio: 'Satish Kundanam os a visionary leader with experience in environmental technology and waste management. As the founder of TREEGEN RECYCLERSS,While ensuring compliance with environmental regulations and maintaining the highest standards of safety and efficiency. His expertise in lean manufacturing and quality management has been instrumental in scaling the company\'s operations.',
+      bio: 'Satish Kundanam is a visionary leader with experience in environmental technology and waste management. As the founder of TREEGEN RECYCLERSS,While ensuring compliance with environmental regulations and maintaining the highest standards of safety and efficiency. His expertise in lean manufacturing and quality management has been instrumental in scaling the company\'s operations.',
       education: [
         'MBA in Operations Management - XLRI Jamshedpur',
         'B.E. in Industrial Engineering - NIT Trichy',
